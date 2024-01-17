@@ -1,4 +1,9 @@
 const start = document.querySelector('.start-btn button');
+const topic = document.querySelector('.topic');
+const fullforms = document.querySelector('.fullforms');
+const aptitude = document.querySelector('.aptitude');
+const dbms = document.querySelector('.dbms');
+const java = document.querySelector('.java');
 const infoBox = document.querySelector('.info-box');
 const infoContinue = infoBox.querySelector('.buttons .continue');
 const infoQuit = infoBox.querySelector('.buttons .quit');
@@ -29,18 +34,50 @@ start.addEventListener('click', () => {
     // start.textContent = 'Replay';
 });
 
-
 infoQuit.addEventListener('click', () => {
     infoBox.classList.remove('infoActive');
     // start.textContent = 'Start Quiz'
 });
 
 infoContinue.addEventListener('click', () => {
-    quizBox.classList.add('activeQuiz');
+    topic.classList.add('topicActive');
     infoBox.classList.remove('infoActive');
+});
+
+fullforms.addEventListener('click', () =>{
+    quizBox.classList.add('activeQuiz');
+    topic.classList.remove('topicActive');
     startTimer(timeValue);
     startTimeLine(timeValue);
 });
+
+aptitude.addEventListener('click', () =>{
+    quizBox.classList.add('activeQuiz');
+    topic.classList.remove('topicActive');
+    startTimer(timeValue);
+    startTimeLine(timeValue);
+});
+
+dbms.addEventListener('click', () =>{
+    quizBox.classList.add('activeQuiz');
+    topic.classList.remove('topicActive');
+    startTimer(timeValue);
+    startTimeLine(timeValue);
+});
+
+java.addEventListener('click', () =>{
+    quizBox.classList.add('activeQuiz');
+    topic.classList.remove('topicActive');
+    startTimer(timeValue);
+    startTimeLine(timeValue);
+});
+
+// infoContinue.addEventListener('click', () => {
+//     quizBox.classList.add('activeQuiz');
+//     infoBox.classList.remove('infoActive');
+//     startTimer(timeValue);
+//     startTimeLine(timeValue);
+// });
 
 nextQuesBtn.addEventListener('click', () => {
     quesNum++; console.log('next: ', quesNum);
