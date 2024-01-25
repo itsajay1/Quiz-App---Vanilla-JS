@@ -1,6 +1,6 @@
 // creating an array and passing the number, questions, options, and answers
 let questions = [
-    {
+  {
     numb: 1,
     question: "What does HTML stand for?",
     answer: "Hyper Text Markup Language",
@@ -11,7 +11,7 @@ let questions = [
       "Hyper Tool Multi Language"
     ]
   },
-    {
+  {
     numb: 2,
     question: "What does CSS stand for?",
     answer: "Cascading Style Sheet",
@@ -22,7 +22,7 @@ let questions = [
       "Cascading Style Sheet"
     ]
   },
-    {
+  {
     numb: 3,
     question: "What does PHP stand for?",
     answer: "Hypertext Preprocessor",
@@ -33,7 +33,7 @@ let questions = [
       "Hometext Preprocessor"
     ]
   },
-    {
+  {
     numb: 4,
     question: "What does SQL stand for?",
     answer: "Structured Query Language",
@@ -44,7 +44,7 @@ let questions = [
       "Structured Query Language"
     ]
   },
-    {
+  {
     numb: 5,
     question: "What does XML stand for?",
     answer: "eXtensible Markup Language",

@@ -4,14 +4,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Awesome Quiz App | Mohammad Asad Khan</title>
+    <title>Awesome Quiz App</title>
     <link rel="stylesheet" href="Css/style.css">
     <!-- FontAweome CDN Link for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
     <script src="JS/questions.js" defer></script>
+    <script src="JS/aptitude question.js" defer></script>
+    <script src="JS/dbms question.js" defer></script>
+    <script src="JS/java question.js" defer></script>
     <script src="JS/app.js" defer></script>
-    
 
 </head>
 
@@ -24,8 +26,8 @@
             <span>Some Rules of the Quiz</span>
         </header>
         <section class="info-list ">
-            <div class="info">1. You will have only <span>15 seconds</span> per each question.</div>
-            <div class="info">2. Once you select your answer, it can't be undone.</div>
+            <div class="info">1. You will have only <span>15 seconds</span> for each question.</div>
+            <div class="info">2. Once you select your answer, you can't change it.</div>
             <div class="info">3. You can't select any option once time goes off.</div>
             <div class="info">4. You can't exit from the Quiz while you're playing.</div>
             <div class="info">5. You'll get points on the basis of your correct answers.</div>
@@ -36,6 +38,16 @@
         </div>
     </div>
 
+    <!----Question topics--->
+    <div class="topic">
+        <header>
+            <span>Choose the topic</span>
+        </header>
+        <button class="fullforms">Computer</button>
+        <button class="aptitude">Aptitude</button>
+        <button class="dbms">DBMS</button>
+        <button class="java">Java</button>
+    </div>
     <!-- QuizBox HTML -->
     <div class="quizBox">
         <header>
@@ -45,7 +57,9 @@
                 <span class="timer_num">15</span>
             </div>
         </header>
-        <div class="time_line"><div class="percent"></div></div>
+        <div class="time_line">
+            <div class="percent"></div>
+        </div>
         <section class="quesWrapper">
             <div class="question"><!--Adding content through JS--></div>
             <div class="option_list">

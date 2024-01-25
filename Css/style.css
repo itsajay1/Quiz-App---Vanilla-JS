@@ -21,36 +21,39 @@ body {
 .start-btn,
 .info-box,
 .quizBox,
-.result_box {
+.result_box,
+.topic {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 
-                0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transform: translate(-50%, -50%);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+        0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
 }
 
 .quizBox.activeQuiz,
+.topic.topicActive,
 .info-box.infoActive,
-.result_box.resultActive{
+.result_box.resultActive {
     z-index: 5;
     opacity: 1;
     transform: translate(-50%, -50%) scale(1);
     pointer-events: auto;
 }
-.start-btn button{
+
+.start-btn button {
     font-size: 25px;
     padding: 10px 20px;
     outline: none;
-    border: .5px solid green;
+    border: .5px solid rgb(0, 107, 128);
     border-radius: 5px;
     cursor: pointer;
     background-color: #0F2027;
-    color: #fff;
+    color: #09b0ed;
 }
 
-.info-box{
+.info-box {
     background-color: #fff;
     width: 540px;
     border-radius: 4px;
@@ -61,44 +64,45 @@ body {
 
 }
 
-.info-box header{
+.info-box header {
     padding: 10px 20px;
-    border-bottom:1px solid #ccc ;
+    border-bottom: 1px solid #ccc;
 }
-.info-box header span{
-    font-size: 30px ;
+
+.info-box header span {
+    font-size: 30px;
     font-weight: 500;
 
 }
 
-.info-box .info-list{
+.info-box .info-list {
     padding: 15px 30px;
     border-bottom: 1px solid #ccc;
-    
+
 }
 
-.info-box .info-list .info{
+.info-box .info-list .info {
     font-size: 18px;
     margin-bottom: 10px;
 }
 
-.info-box .info-list .info span{
+.info-box .info-list .info span {
     font-weight: 700;
     color: #2C5364;
 }
 
-.buttons{
+.buttons {
     display: flex;
     justify-content: flex-end;
     padding: 10px 40px 10px 0;
 }
 
-.buttons .btn{
+.buttons .btn {
     padding: 10px 20px;
     outline: none;
-    border: .5px solid green;
+    border: .5px solid rgb(0, 107, 128);
     background-color: #0F2027;
-    color:#fff;
+    color: #fff;
     border-radius: 4px;
     font-weight: 500;
     font-size: 16px;
@@ -107,20 +111,65 @@ body {
 
 }
 
-.buttons .quit{
+.buttons .quit {
     background-color: #fff;
     color: #0F2027;
     margin-right: 15px;
 }
 
-.buttons .quit:hover{
+.buttons .quit:hover {
+    color: #fff;
+    background-color: #0F2027;
+}
+
+/* Quiz Box css */
+.topic header {
+    text-align: center;
+    padding: 10px 20px;
+    border-bottom: 1px solid #ccc;
+    font-size: 30px;
+    font-weight: 500;
+
+}
+
+.topic {
+    background-color: #fff;
+    width: 540px;
+    border-radius: 4px;
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.7);
+    pointer-events: none;
+    transition: all .3s ease;
+}
+
+.fullforms,
+.aptitude,
+.dbms,
+.java {
+    font-size: 25px;
+    padding: 10px 20px;
+    outline: none;
+    width: 100%;
+    font-weight: 500;
+    border: .1px solid rgb(0, 107, 128);
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    background-color: #0F2027;
+    color: #09b0ed;
+}
+
+.fullforms,
+.aptitude,
+.dbms,
+.java {
     color: #fff;
     background-color: #0F2027;
 }
 
 /* QUIZ BOX CSS */
 
-.quizBox{
+.quizBox {
     width: 550PX;
     background-color: #fff;
     border-radius: 5px;
@@ -130,7 +179,7 @@ body {
     transition: all .3s ease;
 }
 
-.quizBox header{
+.quizBox header {
     padding: 10px 25px;
     display: flex;
     align-items: center;
@@ -140,13 +189,13 @@ body {
 
 }
 
-.quizBox .time_line{
+.quizBox .time_line {
     width: 100%;
     background: #ccc;
     height: 3px;
 }
 
-.quizBox .time_line .percent{
+.quizBox .time_line .percent {
     /* width: 30%; */
     max-width: inherit;
     background-color: green;
@@ -154,12 +203,12 @@ body {
 }
 
 
-.quizBox header .title{
+.quizBox header .title {
     font-size: 18px;
     font-weight: 700;
 }
 
-.quizBox header .timer{
+.quizBox header .timer {
     border: .5px solid rgb(0, 255, 0);
     background-color: #2B5161;
     border-radius: 3px;
@@ -167,7 +216,7 @@ body {
 
 }
 
-.quizBox header .timer .timer_left{
+.quizBox header .timer .timer_left {
     font-size: 15px;
     font-weight: 400;
     color: #fff;
@@ -175,7 +224,7 @@ body {
 
 }
 
-.quizBox header .timer .timer_num{
+.quizBox header .timer .timer_num {
     background-color: #323A43;
     color: #fff;
     font-weight: 700;
@@ -183,18 +232,18 @@ body {
     border-radius: 3px;
 }
 
-.quizBox section{
+.quizBox section {
     padding: 15px 25px;
 
 }
 
-.quizBox section .question{
+.quizBox section .question {
     font-size: 25px;
-    font-weight:600;
+    font-weight: 600;
     margin-bottom: 14px;
 }
 
-.quizBox section .option_list .option{
+.quizBox section .option_list .option {
     margin-bottom: 20px;
     background-color: #F1F8FF;
     border: .5px solid #abd0f5;
@@ -206,42 +255,45 @@ body {
 
 }
 
-.quizBox section .option_list .disabled{
+.quizBox section .option_list .disabled {
     pointer-events: none;
 }
 
-.quizBox section .option_list .option:hover{
+.quizBox section .option_list .option:hover {
     background-color: #d5eaff;
     cursor: pointer;
 }
 
-.quizBox section .option_list i{
+.quizBox section .option_list i {
     font-size: 22px;
     font-weight: 700;
 }
-.quizBox section .option_list .wrong{
+
+.quizBox section .option_list .wrong {
     background-color: #F8D7DB;
     border: .5px solid #c53c4c;
     color: #ff4b60;
 }
 
-.quizBox section .option_list .wrong i{
+.quizBox section .option_list .wrong i {
     border: 3px solid #c53c4c;
     border-radius: 50%;
 }
-.quizBox section .option_list .correct{
+
+.quizBox section .option_list .correct {
     background-color: #C8E0CF;
     color: #238340;
     border: .5px solid #238340;
 
 }
-.quizBox section .option_list .correct i{
+
+.quizBox section .option_list .correct i {
     border: 3px solid #238340;
     border-radius: 50%;
 }
 
 
-.quizBox footer{
+.quizBox footer {
     border-top: 1px solid #ccc;
     display: flex;
     align-items: center;
@@ -250,11 +302,11 @@ body {
 
 }
 
-.quizBox footer .buttons{
+.quizBox footer .buttons {
     padding: 0;
 }
 
-.quizBox footer .buttons .btn.choosing{
+.quizBox footer .buttons .btn.choosing {
     padding: 0;
     opacity: 0;
     pointer-events: none;
@@ -263,7 +315,7 @@ body {
 
 /* Result Box CSS */
 
-.result_box{
+.result_box {
     background-color: #fff;
     width: 400px;
     display: flex;
@@ -271,32 +323,36 @@ body {
     align-items: center;
     border-radius: 5px;
     opacity: 0;
-    transform:  translate(-50%,-50%) scale(1);
+    transform: translate(-50%, -50%) scale(1);
     pointer-events: none;
     transition: all .3s ease;
 
 
 }
-.result_box .icon{
+
+.result_box .icon {
     width: 100%;
     text-align: center;
     padding: 20px 0;
 }
-.result_box .icon i{
+
+.result_box .icon i {
     font-size: 80px;
     color: gold;
 }
-.result_box .complete_text{
+
+.result_box .complete_text {
     font-weight: 500;
     font-size: 18px;
 }
 
-.result_box .score_text{
+.result_box .score_text {
     margin: 15px 0;
     font-size: 15px;
     text-align: center;
 }
-.result_box .buttons{
+
+.result_box .buttons {
     width: 100%;
     align-items: center;
     justify-content: space-around;
@@ -304,6 +360,7 @@ body {
     margin-bottom: 20px;
     margin-top: 20px;
 }
-.result_box .buttons .quit{
+
+.result_box .buttons .quit {
     margin-right: 0;
 }
